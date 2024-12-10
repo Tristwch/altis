@@ -1,0 +1,55 @@
+@import "src/app/styles/mixins/text.scss";
+@import "src/app/styles/mixins/media-queries.scss";
+
+.title {
+  @include text-style-headline-4;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+
+  .arrowDownIcon {
+    transition: 0.3s cubic-bezier(0, 0, 0, 1);
+    font-size: 30px;
+
+    @include desktopMedium {
+      font-size: 40px;
+    }
+  }
+
+  .entered.arrowDownIcon {
+    transform: rotate(180deg);
+  }
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  .locationIcon {
+    margin-right: 16px;
+    font-size: 18px;
+    @include desktopMedium {
+      margin-right: 24px;
+    }
+  }
+
+  .locationText {
+    @include text-style-base;
+    text-align: start;
+  }
+}
+
+.tagList {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  @include text-style-base;
+  display: flex;
+  text-align: start;
+}

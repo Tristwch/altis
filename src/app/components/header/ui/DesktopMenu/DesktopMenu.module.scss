@@ -1,0 +1,51 @@
+@import "src/app/styles/mixins/media-queries.scss";
+
+.desktop-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 94px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include desktop {
+    height: 96px;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    margin: 6px auto 10px;
+
+    @include desktop {
+      margin: 0 70px 0 0;
+    }
+  }
+
+  .desktop-menu {
+    display: none;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 10px;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & > li {
+      padding: 6px;
+      transition: all 0.3s;
+
+      &:hover:not(:last-of-type) {
+        color: #ffe594;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .orderButton {
+    max-height: 32px;
+    max-width: 112px;
+  }
+}

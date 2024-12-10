@@ -1,0 +1,110 @@
+@import "src/app/styles/mixins/text.scss";
+@import "src/app/styles/mixins/media-queries.scss";
+
+.heroSection {
+  margin-bottom: 100px;
+  .title {
+    @include text-style-headline-1;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    padding-top: 30px;
+
+    @include tablet {
+      margin-bottom: 8px;
+    }
+
+    @include desktop {
+      padding-top: 46px;
+    }
+
+    @include desktopMedium {
+      padding-top: 90px;
+      margin-bottom: 16px;
+    }
+  }
+  .subtitle {
+    @include text-style-headline-1;
+    font-weight: 274;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    @include tablet {
+      margin-bottom: 8px;
+    }
+
+    @include desktop {
+    }
+
+    @include desktopMedium {
+      margin-bottom: 16px;
+    }
+  }
+  .text {
+    @include text-style-base;
+
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+
+    @include tablet {
+      margin-bottom: 34px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+
+    @include desktopMedium {
+      font-size: 20px;
+      margin-bottom: 44px;
+    }
+  }
+
+  .swiperContainer {
+    display: flex;
+    position: relative;
+    border-radius: 40px;
+
+    .swiper {
+      margin: 0 auto;
+    }
+  }
+
+  .nextBtn,
+  .prevBtn {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    z-index: 10;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .nextBtn {
+    .arrowNext {
+      transform: rotate(0.5turn);
+    }
+  }
+
+  .prevBtn {
+  }
+
+  .arrowNext,
+  .arrowPrev {
+    min-width: 40px;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+  }
+}

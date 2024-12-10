@@ -1,0 +1,17 @@
+@import "src/app/styles/mixins/text.scss";
+@import "src/app/styles/mixins/media-queries.scss";
+.tag {
+  @include text-style-base;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: #c4c4c4;
+  background-color: #f2f2f2;
+
+  @include desktopMedium {
+    height: 40px;
+    padding: 6px 20px;
+  }
+}

@@ -1,0 +1,166 @@
+@import "src/app/styles/mixins/text.scss";
+@import "src/app/styles/mixins/media-queries.scss";
+.expirianceSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //TODO remove padding it later
+  padding-top: 10px;
+  margin-bottom: 24px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .leftColumn {
+    @include tablet {
+      max-width: 392px;
+    }
+
+    @include desktop {
+      max-width: 480px;
+    }
+    @include desktopMedium {
+      max-width: 790px;
+    }
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 590;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    @include tablet {
+      font-size: 16px;
+    }
+    @include desktop {
+      padding-top: 32px;
+    }
+
+    @include desktopMedium {
+      padding-top: 14px;
+      font-size: 20px;
+    }
+  }
+
+  .text {
+    @include text-style-base;
+  }
+
+  .text:first-of-type {
+    margin-bottom: 12px;
+
+    @include tablet {
+    }
+  }
+  .text:last-of-type {
+    margin-bottom: 22px;
+    @include tablet {
+    }
+  }
+
+  .expirianceTextWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    width: 238px;
+    border-radius: 30px;
+    color: var(--main-light);
+    background-color: var(--main-dark);
+    padding: 14px 34px 20px;
+    margin-bottom: 14px;
+
+    @include desktop {
+      width: 328px;
+      height: 146px;
+    }
+
+    @include desktopMedium {
+      height: 164px;
+      width: 405px;
+    }
+
+    .largeText {
+      font-size: 36px;
+      font-weight: 860;
+      margin-bottom: 6px;
+      text-align: right;
+
+      @include desktop {
+        font-size: 48px;
+      }
+
+      @include desktopMedium {
+        font-size: 64px;
+      }
+    }
+
+    .smallText {
+      width: 100%;
+      font-size: 12px;
+      text-align: right;
+
+      @include desktop {
+        font-size: 16px;
+      }
+
+      @include desktopMedium {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .happyClientsTextWrapper {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+
+    @include tablet {
+    }
+
+    .heartIcon {
+      justify-self: center;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      margin-right: 6px;
+      margin-bottom: auto;
+
+      @include desktop {
+        width: 72px;
+      }
+    }
+
+    .largeText {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      font-size: 36px;
+      font-weight: 860;
+
+      @include desktop {
+        font-size: 48px;
+      }
+
+      @include desktopMedium {
+        font-size: 64px;
+      }
+    }
+
+    .smallText {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 12px;
+
+      @include desktop {
+        font-size: 16px;
+      }
+
+      @include desktopMedium {
+        font-size: 20px;
+      }
+    }
+  }
+}

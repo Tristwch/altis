@@ -1,0 +1,35 @@
+$base-font-family: "SF Pro", sans-serif;
+$main-font-size: 18px;
+$main-line-height: 26px;
+
+$text-color: #343434;
+$main-dark: #516e94;
+$main-light: #fff;
+$main-light-bg: #f9f9f9;
+$yellow: #e0ce65;
+$alert: #dc2424;
+
+$borderRadius: 12px;
+
+//breakpoints
+$mobileMedium: 480px;
+$tablet: 768px;
+$destopSmall: 1024px;
+$desktopMedium: 1280px;
+$desktopStandard: 1440px;
+$desktopLarge: 1600px;
+$desktopExtraLarge: 1920px;
+
+//paddings-container
+$mobilePadding: 20px;
+$tabletPadding: 32px;
+$desktopPadding: 35px;
+$desktopMediumPadding: 55px;
+$desktopPaddingStandard: 100px;
+$desktopPaddingExtraLargeLeft: 321px;
+$desktopPaddingExtraLargeRight: 311px;
+
+//paddings-section
+$mobileSectionPaddingVertical: 30px;
+$tabletSectionPaddingVertical: 70px;
+$desktopSectionPaddingVertical: 70px;

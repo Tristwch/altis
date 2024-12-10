@@ -1,0 +1,83 @@
+@import "src/app/styles/mixins/text.scss";
+
+.footer-container {
+  color: white;
+  background-color: #24242f;
+  padding: 0 0 54px 0;
+
+  @include desktop {
+    padding: 0 0 24px 0;
+  }
+  .logo-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .logo {
+    display: none;
+
+    @include tablet {
+      display: block;
+      padding-top: 32px;
+      padding-left: 30px;
+    }
+
+    @include desktop {
+      padding-left: 32px;
+    }
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    @include mobile-medium {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .footer-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 16px 26px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include mobile-medium {
+      padding: 22px 24px 26px;
+    }
+
+    @include tablet {
+      padding: 24px 30px 26px;
+    }
+
+    @include desktop {
+      padding: 42px 32px 26px;
+    }
+
+    .footer-list-item {
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        @include text-style-footer;
+      }
+
+      & > *:not(:last-child) {
+        margin-bottom: 4px;
+
+        @include tablet {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  .footer-contact-links {
+    @include text-style-footer;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+}

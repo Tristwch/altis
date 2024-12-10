@@ -1,0 +1,41 @@
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .accordionItem {
+    margin-bottom: 10px;
+    position: relative;
+
+    .accordionCheckbox {
+      display: none;
+    }
+
+    .accordionLabel {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+    }
+
+    .accordionAnswer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 10px;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      background-color: red;
+
+      // When checkbox is checked, expand the answer
+      .accordionCheckbox:checked ~ & {
+        max-height: 100vh; // Large enough to accommodate content
+        padding: 10px;
+      }
+    }
+  }
+}

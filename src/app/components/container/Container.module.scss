@@ -1,0 +1,17 @@
+@import "src/app/styles/mixins/media-queries.scss";
+
+.container {
+  padding: 0 30px;
+
+  @include tablet {
+    padding: 0 46px;
+  }
+
+  @include desktop {
+    padding: 0 76px;
+  }
+
+  @include desktopMedium {
+    padding: 0 100px;
+  }
+}

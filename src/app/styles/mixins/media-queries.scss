@@ -1,0 +1,50 @@
+@import "./variables.scss";
+
+@mixin mobile-medium {
+  @media (min-width: $mobileMedium) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $destopSmall) {
+    @content;
+  }
+}
+
+@mixin desktopMedium {
+  @media (min-width: $desktopMedium) {
+    @content;
+  }
+}
+
+@mixin desktopStandard {
+  @media (min-width: $desktopStandard) {
+    @content;
+  }
+}
+
+@mixin desktopLarge {
+  @media (min-width: $desktopLarge) {
+    @content;
+  }
+}
+
+@mixin desktopExtraLarge {
+  @media (min-width: $desktopExtraLarge) {
+    @content;
+  }
+}
+
+//mixin for hover devices
+@mixin hover-devices {
+  @media #{$mouse-device} {
+    @content;
+  }
+}

@@ -1,0 +1,31 @@
+@import "src/app/styles/mixins/text.scss";
+@import "src/app/styles/mixins/media-queries.scss";
+.portfolio {
+  padding-top: 50px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .cardList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-bottom: 24px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 20px;
+    }
+
+    @include desktopMedium {
+      grid-column-gap: 50px;
+    }
+  }
+
+  .subtitle {
+  }
+}

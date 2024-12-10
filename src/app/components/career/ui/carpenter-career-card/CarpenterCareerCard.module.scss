@@ -1,0 +1,53 @@
+@import "src/app/styles/mixins/text.scss";
+@import "src/app/styles/mixins/media-queries.scss";
+
+.vacancyCard {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    @include text-style-base;
+    font-weight: 590;
+    margin-bottom: 8px;
+
+    @include desktopMedium {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .list {
+    list-style: disc;
+    margin-bottom: 24px;
+    padding-left: 34px;
+    li {
+      @include text-style-base;
+
+      @include desktopMedium {
+        padding: 10px 0;
+      }
+    }
+
+    li::marker {
+      color: #a43e13;
+    }
+  }
+
+  .message,
+  .phone {
+    @include text-style-base;
+    display: block;
+  }
+  .message {
+    margin-bottom: 24px;
+  }
+
+  .phone {
+    color: #a43e13;
+    font-weight: 590;
+
+    @include desktopMedium {
+      font-size: 20px;
+    }
+  }
+}

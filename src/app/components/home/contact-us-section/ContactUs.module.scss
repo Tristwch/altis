@@ -1,0 +1,60 @@
+@import "src/app/styles/mixins/text.scss";
+@import "src/app/styles/mixins/media-queries.scss";
+
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 26px;
+
+  .title {
+    @include text-style-headline-extra-large;
+    margin-bottom: 12px;
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 14px;
+    }
+    @include desktop {
+      margin-bottom: 20px;
+    }
+
+    @include desktopMedium {
+      margin-bottom: 32px;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 22px;
+
+    & > :first-child {
+      margin-bottom: 12px;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      padding: 0 60px;
+
+      & > :first-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include desktopMedium {
+      padding: 0 70px;
+    }
+  }
+
+  .text {
+    display: block;
+    color: var(--gray-1);
+  }
+
+  .submitButton {
+    margin-bottom: 20px;
+  }
+}

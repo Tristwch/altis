@@ -1,0 +1,21 @@
+@import "src/app/styles/mixins/text.scss";
+.faqSection {
+  padding-top: 64px;
+  margin-bottom: 90px;
+  .title {
+    @include text-style-headline-2;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  [class*="szh-accordion__item-content"] {
+    transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+  }
+  [class*="szh-accordion__item-panel"] {
+    padding-bottom: 28px;
+  }
+}

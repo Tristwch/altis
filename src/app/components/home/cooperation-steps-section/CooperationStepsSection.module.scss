@@ -1,0 +1,80 @@
+@import "src/app/styles/mixins/media-queries.scss";
+@import "src/app/styles/mixins/text.scss";
+.cooperationSection {
+  margin-bottom: 34px;
+  .title {
+    @include text-style-headline-2;
+    position: relative;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+  }
+
+  .title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+
+    background-color: var(--gray-1);
+  }
+  .cooperationStep {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cooperationStep::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 84px);
+    height: 1px;
+    background-color: #000;
+
+    @include desktopMedium {
+      width: calc(100% - 106px);
+    }
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainText {
+    @include text-style-base;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .secondText {
+    @include text-style-base;
+    font-size: 12px;
+    color: var(--gray-1);
+
+    @include desktopMedium {
+      font-size: 16px;
+    }
+  }
+
+  .ellipse {
+    min-width: 58px;
+    min-height: 58px;
+    border-radius: 50%;
+    border: 1px solid var(--main-dark);
+
+    display: grid;
+    place-items: center;
+
+    @include desktopMedium {
+      min-width: 80px;
+      min-height: 80px;
+    }
+  }
+}

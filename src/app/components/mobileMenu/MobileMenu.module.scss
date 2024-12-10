@@ -1,0 +1,43 @@
+@import "src/app/styles/mixins/media-queries.scss";
+.mobileMenuContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--main-light);
+  height: 60px;
+  border-radius: 40px 40px 0px 0px;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  align-items: center;
+  height: 100%;
+  font-size: 10px;
+
+  @include mobile-medium {
+    gap: 36px;
+  }
+
+  @include tablet {
+    gap: 46px;
+  }
+}
+
+.link {
+  display: grid;
+  place-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}

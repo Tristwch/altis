@@ -1,0 +1,60 @@
+@import "src/app/styles/mixins/text.scss";
+@import "src/app/styles/mixins/media-queries.scss";
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 312px;
+  border-radius: 36px;
+
+  @include desktopMedium {
+    max-width: 525px;
+  }
+}
+
+.label {
+  @include text-style-base;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  color: var(--black);
+  width: 100%;
+  padding: 0 32px;
+
+  @include tablet {
+    font-size: 12px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.input {
+  @include text-style-base;
+  padding: 6px 32px;
+  font-size: 16px;
+  font-weight: 400px;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  outline: none;
+  border-radius: 36px;
+  min-height: 40px;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+
+  @include desktopMedium {
+    font-size: 24px;
+    min-height: 72px;
+  }
+
+  &:focus {
+    border-color: var(--primary);
+  }
+}
